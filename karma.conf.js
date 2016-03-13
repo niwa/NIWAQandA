@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Fri Jun 26 2015 11:39:06 GMT+1200 (NZST)
 
-module.exports = function(config) {
+module.exports = function (config) {
     config.set({
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
@@ -32,9 +32,9 @@ module.exports = function(config) {
         preprocessors: {
 
             'dist/*.js': 'coverage'
-        } ,
+        },
 
-        plugins : [
+        plugins: [
             'karma-jasmine',
             'karma-chrome-launcher',
             'karma-firefox-launcher',
@@ -44,14 +44,14 @@ module.exports = function(config) {
         ],
 
         coverageReporter: {
-            type : 'cobertura',
-            dir : 'coverage/'
+            type: 'cobertura',
+            dir: 'coverage/'
         },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress','coverage'],
+        reporters: ['progress', 'coverage'],
 
         // web server port
         port: 9876,
@@ -72,7 +72,7 @@ module.exports = function(config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Firefox','PhantomJS'],
+        browsers: ['Firefox', 'PhantomJS'],
 
 
         // Continuous Integration mode

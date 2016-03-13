@@ -1,4 +1,4 @@
-qanda.controller('qandaController', ['$scope', 'qandaService','$sce', function ($scope, qandaService,$sce) {
+qanda.controller('qandaController', ['$scope', 'qandaService', '$sce', function ($scope, qandaService, $sce) {
 
     $scope.model = {
         headlineIds: [],
@@ -9,7 +9,7 @@ qanda.controller('qandaController', ['$scope', 'qandaService','$sce', function (
 
     $scope.$watch('model.headlineIds', function (ids, oldids) {
 
-        if ((typeof ids != 'undefined')&&(ids.length != 0)) {
+        if ((typeof ids != 'undefined') && (ids.length != 0)) {
             qandaService.getNodes(ids).then(function (nodes) {
                 $scope.model.nodeListSorted = nodes;
             });
@@ -21,7 +21,7 @@ qanda.controller('qandaController', ['$scope', 'qandaService','$sce', function (
         qandaService.getLatestNodeIds().then(function (ids) {
             $scope.model.headlineIds = ids;
 
-        },function(reason) {
+        }, function (reason) {
             $scope.model.nodeListSorted = false;
         });
 

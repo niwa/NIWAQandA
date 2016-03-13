@@ -47,7 +47,7 @@ describe('Controller: qandaController', function () {
     beforeEach(inject(function ($controller, $rootScope, _qandaService_) {
         scope = $rootScope;
         qandaService = _qandaService_;
-        controller = $controller('qandaController', {$scope: scope,qandaService: qandaService});
+        controller = $controller('qandaController', {$scope: scope, qandaService: qandaService});
         scope.getLatestNodes();
         scope.$digest();
     }));

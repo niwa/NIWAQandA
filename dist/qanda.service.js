@@ -1,5 +1,5 @@
 qanda
-    .service('qandaService', ['$http', '$q','$sce', 'qandaModelService', function ($http, $q, $sce,newsModelService) {
+    .service('qandaService', ['$http', '$q', '$sce', 'qandaModelService', function ($http, $q, $sce, newsModelService) {
 
         return {
             getLatestNodeIds: function () {
@@ -19,7 +19,7 @@ qanda
 
                 }, function errorCallback(response) {
 
-                    return('http  error');
+                    return ('http  error');
                 });
                 return deferred.promise;
             },
@@ -46,7 +46,7 @@ qanda
                             'created': response.data.created,
                             'title': response.data.title,
                             'question': response.data.field_question.und[0].value,
-                            'answer':response.data.field_answer.und[0].value
+                            'answer': response.data.field_answer.und[0].value
                         }
                         counter++;
                         nodes.push(node);
@@ -55,7 +55,7 @@ qanda
                             deferred.resolve(nodes.sort(compare));
                         }
                     }, function errorCallback(response) {
-                        return('http error');
+                        return ('http error');
                     })
                 }
                 return deferred.promise;
