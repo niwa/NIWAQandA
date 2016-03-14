@@ -7,7 +7,7 @@ describe('It should display qanda', function () {
                 headlineIds: [],
                 nodeListRaw: [],
                 nodeListSorted: []
-            }
+            };
             var nodes = [
                 {
                     'created': "1447120695",
@@ -31,14 +31,14 @@ describe('It should display qanda', function () {
                     'answer': 'answer3',
                     'title': 'testing3'
                 }
-            ]
+            ];
 
             $scope.getLatestNodes = function () {
 
                 $scope.model.nodeListSorted = nodes;
-            }
-        })
-    }))
+            };
+        });
+    }));
 
     beforeEach(inject(function (_$compile_, _$rootScope_) {
         $compile = _$compile_;
@@ -58,6 +58,6 @@ describe('It should display qanda', function () {
         expect(element.html()).toContain('answer2');
         expect(element.html()).toContain('answer3');
 
-    })
+    });
 
-})
+});

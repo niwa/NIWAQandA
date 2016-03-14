@@ -1,4 +1,3 @@
-"use_strict"
 describe("get qanda", function () {
     var newsService, newsModelService, httpBackend;
     var testResponse = '{"titles":[{"title":"What is a drought?","created":"1400798790","nid":"110"},{"title":"How does dew form ' +
@@ -16,21 +15,20 @@ describe("get qanda", function () {
         qandaModelService = _qandaModelService_;
         httpBackend = $httpBackend;
 
-        httpBackend.whenGET(qandaModelService.get('headlinesUrl')).respond(function (method, url, data) {
+        httpBackend.whenGET(qandaModelService.get('headlinesUrl')).respond(function () {
             return [200, testResponse];
-        })
+        });
         var exptUrl = qandaModelService.get('nodeUrl') + '109';
-        httpBackend.whenGET(exptUrl).respond(function (method, url, data) {
-
+        httpBackend.whenGET(exptUrl).respond(function () {
             return [200, testReponseNode];
-        })
+        });
 
-    }))
+    }));
 
     it("should have the right nodes", function () {
         qandaService.getLatestNodeIds().then(function (ids) {
             expect(ids).toEqual(['110', '109', '94', '76', '63', '62', '61', '60', '59']);
-        })
+        });
 
         var ids = new Array(0);
         ids.push(109);
@@ -38,9 +36,9 @@ describe("get qanda", function () {
         qandaService.getNodes(ids).then(function (nodes) {
             expect(nodes[0].nid).toEqual('109');
             expect(nodes[0].title).toEqual('How does dew form?')
-        })
+        });
         httpBackend.flush();
-    })
-})
+    });
+});
 
 

@@ -1,10 +1,10 @@
 qanda.directive('qanda', [function () {
-    function link(scope, ele, attrs) {
+    function link(scope) {
         scope.getLatestNodes();
     }
 
     return {
-        restrict: 'EA',
+        restrict: 'E',
         link: link,
         template: '<div id="niwaQndA" class="panel panel-primary col-md-4">' +
         '<div class="panel-heading">' +
@@ -22,5 +22,5 @@ qanda.directive('qanda', [function () {
         '</div></div>',
         controller: 'qandaController',
         scope: false
-    }
-}])
+    };
+}]);
