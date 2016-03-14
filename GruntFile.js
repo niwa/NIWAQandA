@@ -4,8 +4,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         concat: {
             options: {
-                separator: '\n',
-                sourceMap: true
+                separator: '\n'
             },
             dist: {
                 src: ['dist/qanda.js','dist/**/qanda.*.js'],
