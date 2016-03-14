@@ -51,7 +51,7 @@ describe('Controller: qandaController', function () {
     }));
 
     it('should set the correct values into the scope', function () {
-        expect(scope.model.headlineIds).toEqual(new Array('22,33,44,55,66'));
-        expect(scope.model.nodeListSorted).toEqual(mockNodeListSorted);
+        expect(scope.qanda.model.headlineIds).toEqual(new Array('22,33,44,55,66'));
+        expect(scope.qanda.model.nodeListSorted).toEqual(mockNodeListSorted);
     });
 });
