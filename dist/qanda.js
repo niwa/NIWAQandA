@@ -1,2 +1,1 @@
-
-var qanda = angular.module('qanda',[]);
+var qanda = angular.module('qanda', []);
