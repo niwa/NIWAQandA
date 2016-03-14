@@ -6,7 +6,7 @@ qanda.directive('qanda', [function () {
     return {
         restrict: 'E',
         link: link,
-        template: '<div id="niwaQndA" class="panel panel-primary col-md-4">' +
+        template: '<div id="niwaQndA" class="panel panel-primary">' +
         '<div class="panel-heading">' +
         '<h1 class="panel-title">NIWA Q&amp;A </h1>' +
         '</div>' +
