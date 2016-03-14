@@ -10,7 +10,7 @@ qanda.directive('qanda', [function () {
         '<div class="panel-heading">' +
         '<h1 class="panel-title">NIWA Q&amp;A </h1>' +
         '</div>' +
-        '<div ng-repeat="node in model.nodeListSorted" class="body">' +
+        '<div ng-repeat="node in qanda.model.nodeListSorted" class="body">' +
         '<img width="100%" ng-show="$index==0" ng-src="{{node.nodeImage}}" />' +
         '<h3>{{node.title }}</h3>' +
         '<h4>Question</h4>' +

@@ -3,10 +3,12 @@ describe('It should display qanda', function () {
 
     beforeEach(module('qanda', function ($provide, $controllerProvider) {
         $controllerProvider.register('qandaController', function ($scope) {
-            $scope.model = {
-                headlineIds: [],
-                nodeListRaw: [],
-                nodeListSorted: []
+            $scope.qanda = {
+                model: {
+                    headlineIds: [],
+                    nodeListRaw: [],
+                    nodeListSorted: []
+                }
             };
             var nodes = [
                 {
@@ -35,7 +37,7 @@ describe('It should display qanda', function () {
 
             $scope.getLatestNodes = function () {
 
-                $scope.model.nodeListSorted = nodes;
+                $scope.qanda.model.nodeListSorted = nodes;
             };
         });
     }));
