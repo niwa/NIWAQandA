@@ -4,7 +4,8 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         concat: {
             options: {
-                separator: ';'
+                separator: '\n',
+                sourceMap: true
             },
             dist: {
                 src: ['dist/qanda.js','dist/**/qanda.*.js'],
@@ -28,7 +29,7 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
-            files: ['Gruntfile.js', 'dist/**/*.js', 'test/**/*.js'],
+            files: ['Gruntfile.js', 'dist/**/*.js', 'specs/**/*.js'],
             options: {
                 loopfunc: true,
                 globals: {

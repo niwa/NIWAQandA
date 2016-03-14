@@ -35,7 +35,7 @@ describe("get qanda", function () {
 
         qandaService.getNodes(ids).then(function (nodes) {
             expect(nodes[0].nid).toEqual('109');
-            expect(nodes[0].title).toEqual('How does dew form?')
+            expect(nodes[0].title).toEqual('How does dew form?');
         });
         httpBackend.flush();
     });
