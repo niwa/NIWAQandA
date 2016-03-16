@@ -8,7 +8,7 @@ qanda.service('qandaService', ['$http', '$q', '$sce', 'qandaModelService', funct
                 url: newsModelService.get('headlinesUrl')
             }).then(function successCallback(response) {
 
-                var nodelIstLength = response.data.titles.length;
+                var nodelIstLength = response.data.titles.length>4? 4:response.data.titles.length;
                 var nodeList = [];
                 for (var i = 0; i < nodelIstLength; i++) {
                     nodeList.push(response.data.titles[i].nid);
