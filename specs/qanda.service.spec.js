@@ -27,7 +27,7 @@ describe("get qanda", function () {
 
     it("should have the right nodes", function () {
         qandaService.getLatestNodeIds().then(function (ids) {
-            expect(ids).toEqual(['110', '109', '94', '76', '63', '62', '61', '60', '59']);
+            expect(ids).toEqual(['110', '109', '94', '76']);
         });
 
         var ids = new Array(0);
