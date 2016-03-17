@@ -47,7 +47,7 @@ qanda.directive('qanda', [function () {
         '<h4>Question</h4>' +
         '<p ng-bind-html="node.question | markup"></p>' +
         '<h4>Answer</h4>' +
-        '<p ng-bind-html="node.answer | markup"></p>' +
+        '<p ng-bind-html="node.answer | markup"> <a href="#">Read more...</a></p>' +
         '</div>' +
         '</div>' +
         '</div></div>',
@@ -55,6 +55,7 @@ qanda.directive('qanda', [function () {
         scope: false
     };
 }]);
+
 qanda.filter('markup', ['$sce', function ($sce) {
     return function (html) {
         return $sce.trustAsHtml(html);
@@ -110,7 +111,7 @@ qanda.service('qandaService', ['$http', '$q', '$sce', 'qandaModelService', funct
             };
             var deferred = $q.defer();
 
-            var howManyNodesToShow = ids.length <= 10 ? ids.length : 10;
+            var howManyNodesToShow = ids.length <= 1 ? ids.length : 1;
             var counter = 1;
             var nodes = [];
             for (var i = 0; i < howManyNodesToShow; i++)
@@ -143,6 +144,3 @@ qanda.service('qandaService', ['$http', '$q', '$sce', 'qandaModelService', funct
     };
 
 }]);
-
-
-
