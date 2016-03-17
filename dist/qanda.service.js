@@ -29,7 +29,7 @@ qanda.service('qandaService', ['$http', '$q', '$sce', 'qandaModelService', funct
             };
             var deferred = $q.defer();
 
-            var howManyNodesToShow = ids.length <= 10 ? ids.length : 10;
+            var howManyNodesToShow = ids.length <= 1 ? ids.length : 1;
             var counter = 1;
             var nodes = [];
             for (var i = 0; i < howManyNodesToShow; i++)
@@ -62,6 +62,3 @@ qanda.service('qandaService', ['$http', '$q', '$sce', 'qandaModelService', funct
     };
 
 }]);
-
-
-

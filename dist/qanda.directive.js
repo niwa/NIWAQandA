@@ -16,7 +16,7 @@ qanda.directive('qanda', [function () {
         '<h4>Question</h4>' +
         '<p ng-bind-html="node.question | markup"></p>' +
         '<h4>Answer</h4>' +
-        '<p ng-bind-html="node.answer | markup"></p>' +
+        '<p ng-bind-html="node.answer | markup"> <a href="#">Read more...</a></p>' +
         '</div>' +
         '</div>' +
         '</div></div>',
